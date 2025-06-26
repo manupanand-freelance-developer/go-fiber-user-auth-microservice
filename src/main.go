@@ -27,6 +27,9 @@ func main() {
 		return c.SendString("value is:" + c.Params("value"))
 		
 	})
+	app.Get("/health",func(c *fiber.Ctx) error {
+		return c.SendString("Health is ok..")
+	})
 
 	// ✅ Start server
 	err := app.Listen(":3000")
