@@ -30,7 +30,7 @@ func main() {
 	app.Get("/health",func(c *fiber.Ctx) error {
 		return c.SendString("Health is ok..")
 	})
-
+	app.Static("/readme","./public")
 	// ✅ Start server
 	err := app.Listen(":3000")
 	if err != nil {
