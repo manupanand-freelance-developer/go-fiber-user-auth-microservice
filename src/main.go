@@ -24,7 +24,7 @@ func main() {
 	})
 	app.Get("/id/:value", func(c *fiber.Ctx) error {
 		fmt.Println(model.Name)
-		return c.SendString("value is:" + c.Params("value"))
+		return c.SendString("id  is:" + c.Params("value"))
 		
 	})
 	app.Get("/health",func(c *fiber.Ctx) error {
