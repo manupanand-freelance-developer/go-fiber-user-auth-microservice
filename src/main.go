@@ -22,7 +22,7 @@ func main() {
 	app.Get("/", func(c *fiber.Ctx) error {
 		return c.SendString("This is manupanands testing api...")
 	})
-	app.Get("/:value", func(c *fiber.Ctx) error {
+	app.Get("/id/:value", func(c *fiber.Ctx) error {
 		fmt.Println(model.Name)
 		return c.SendString("value is:" + c.Params("value"))
 		
